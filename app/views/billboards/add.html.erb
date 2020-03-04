@@ -1,2 +1,9 @@
-<h1>Billboards#add</h1>
-<p>Find me in app/views/billboards/add.html.erb</p>
+<h1> Make New Billboard</h1>
+
+
+
+<%=form_for @billboard do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title%>
+<%= f.submit%>
+<%end%>

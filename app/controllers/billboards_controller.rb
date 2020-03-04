@@ -10,5 +10,6 @@ class BillboardsController < ApplicationController
   end
 
   def add
+    @billboard = Billboard.new
   end
 end
