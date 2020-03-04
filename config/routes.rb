@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'songs/index'
+  get 'songs/new'
+  get 'songs/show'
+  get 'songs/edit'
+  get 'artists/index'
+  get 'artists/new'
+  get 'artists/show'
+  get 'artists/edit'
   root "billboards#index"
 
   resources :billboards
