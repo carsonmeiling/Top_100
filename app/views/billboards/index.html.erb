@@ -2,5 +2,5 @@
 
 
 <% @billboards.each do |billboard| %>
-<%= link_to billboard.title, billboard %>
+<%= link_to billboard.title, billboard_path(billboard.id) %>
 <% end %>

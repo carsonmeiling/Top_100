@@ -1,7 +1,6 @@
 <h1>Artists</h1>
 
 <% @artists.each do |artist|%>
-<%= artist.name%>
+<%= link_to artist.name, artists_show_path %>
 <%= artist.genre%>
-
 <%end%>

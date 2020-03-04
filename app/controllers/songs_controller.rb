@@ -8,7 +8,7 @@ class SongsController < ApplicationController
   end
 
   def show
-    @songs = Songs.find(params[:id])
+    @songs = Songs.find(params[:billboard_id])
   end
 
   def edit
