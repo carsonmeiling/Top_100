@@ -1,0 +1,6 @@
+<h1><%= @billboard.title%></h1>
+<% @billboard.artists.each do |a|%>
+<%= a.name %>
+<%end%>
+
+<h3> <%= link_to "Go Back", billboards_path%>

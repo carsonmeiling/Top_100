@@ -1,6 +1,6 @@
 <h1>Artists</h1>
 
 <% @artists.each do |artist|%>
-<%= link_to artist.name, artists_show_path %>
+<%= link_to artist.name, billboard_artist_path(@billboard) %>
 <%= artist.genre%>
 <%end%>
