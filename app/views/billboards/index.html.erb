@@ -4,3 +4,5 @@
 <% @billboards.each do |billboard| %>
 <%= link_to billboard.title, billboard_path(billboard.id) %>
 <% end %>
+
+<%= link_to "Make new Billboard", new_billboard_path%>
