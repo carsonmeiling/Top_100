@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  before_action :set_billboard
   def index
     @artists = @billboard.artists
   end
@@ -34,13 +35,18 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
-    Artist.find(params[:id]).destory
-    redirect_to billboard_artists_path(@billboard)
+    Artist.find(params[:id]).destroy
+    redirect_to billboard_path(@billboard)
   end
 
   private
 
     def artist_params
       params.require(:artist).permit(:name, :genre )
+    end
+
+    def set_billboard
+      # binding.pry
+      @billboard = Billboard.find(params[:billboard_id])
     end
 end

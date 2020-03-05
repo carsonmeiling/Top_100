@@ -1,2 +1,10 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<h1>Add new Artist</h1>
+<%= form_for @artist, url: "/billboards/#{@billboard.id}/artists" do |a|%>
+  <%= a.label :name%>
+  <%= a.text_area :name%>
+
+  <%= a.label :genre%>
+  <%= a.text_area :genre%>
+
+  <%= a.submit%>
+<% end %>
