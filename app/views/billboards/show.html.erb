@@ -3,4 +3,7 @@
 <%= link_to a.name, billboard_artist_path(@billboard, a) %>
 <%end%>
 
+<%= link_to "Edit Billboard", edit_billboard_path(@billboard)%>
+<%= link_to "Delete", billboard_path(@billboard), method: :delete%>
 <%= link_to "Go Back", billboards_path%>
+

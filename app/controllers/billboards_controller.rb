@@ -33,6 +33,11 @@ class BillboardsController < ApplicationController
     end
   end
 
+  def destroy
+    Billboard.find(params[:id]).destroy
+    redirect_to billboards_path
+  end
+
 
   private
 
