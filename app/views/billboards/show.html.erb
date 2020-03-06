@@ -1,4 +1,4 @@
-<h1><%= @billboard.title%></h1>
+<h1>Billboard Name: <%= @billboard.title%></h1>
 <% @billboard.artists.each do |a|%>
 <%= link_to a.name, billboard_artist_path(@billboard, a) %>
 <%end%>

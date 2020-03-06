@@ -37,7 +37,7 @@ class SongsController < ApplicationController
 
 def destroy
   @song.destroy
-  redirect_to billboard_artist_path(@artist)
+  redirect_to billboard_artist_path(@artist.billboard_id, @artist)
 end
 
 
