@@ -1,7 +1,7 @@
 <h1><%=@artist.name%></h1>
 <h3><%=@artist.genre%></h3>
 
-<%=form_for @artist do |a|%>
+<%=form_for ([@billboard, @artist]) do |a|%>
 
   <%= a.label :name%>
   <%= a.text_field :name%>

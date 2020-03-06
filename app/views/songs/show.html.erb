@@ -1,6 +1,6 @@
 <h1>Song Name: <%=@song.name%></h1>
 <h3>Song Length: <%=@song.length%></h3>
 
-<%= link_to "Edit Song", edit_artist_song_path(@song)%>
+<%= link_to "Edit Song", edit_artist_song_path(@artist, @song)%>
 <%= link_to "Delete Song", artist_song_path(@artist, @song), method: :delete%>
 <%= link_to 'Back to Artist', billboard_artist_path(@artist.billboard_id, @artist)%>

@@ -1,2 +1,13 @@
-<h1>Songs#edit</h1>
-<p>Find me in app/views/songs/edit.html.erb</p>
+<h1><%=@song.name%></h1>
+<h3><%=@song.length%></h3>
+
+<%=form_for ([@artist, @song]) do |a|%>
+
+  <%= a.label :name%>
+  <%= a.text_field :name%>
+
+  <%= a.label :length%>
+  <%= a.text_field :length%>
+
+  <%= a.submit%>
+<% end %>
