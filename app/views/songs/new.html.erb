@@ -1,2 +1,11 @@
-<h1>Songs#new</h1>
-<p>Find me in app/views/songs/new.html.erb</p>
+<h1>New Song</h1>
+
+<%= form_with( model: [@artist, @song]) do |s|%>
+  <%= s.label :name%>
+  <%= s.text_area :name%>
+
+  <%= s.label :length%>
+  <%= s.text_area :length%>
+
+  <%= s.submit%>
+<% end %>

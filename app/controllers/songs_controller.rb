@@ -1,17 +1,18 @@
 class SongsController < ApplicationController
   before_action :set_artist
-  before_action :set_song, only [:show, :edit, :update :destroy]
+  before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def index
     @songs = Song.all
   end
 
   def new
-    @songs = Song.new
+    @song = Song.new
   end
 
   def create
-    @song = Songs.new(song_params)
+    # binding .pry
+    @song = @artist.songs.new(song_params)
     if @song.save
       redirect_to [@artist, @song]
     else
@@ -31,7 +32,13 @@ class SongsController < ApplicationController
       redirect_to [@artist, @song]
     else
       render :edit
+    end
   end
+
+def destroy
+  @song.destroy
+  redirect_to billboard_artist_path(@artist)
+end
 
 
 
@@ -46,7 +53,7 @@ class SongsController < ApplicationController
   end
 
   def set_song
-    @songs = Songs.find(params[:artist_id])
+    @song = Song.find(params[:id])
   end
 
 end
